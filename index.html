@@ -11,7 +11,6 @@
 <style>
 
 * { box-sizing: border-box; }
-
 html { scroll-behavior: smooth; }
 
 body {
@@ -105,9 +104,7 @@ nav {
     padding: 85px 0;
 }
 
-.hero-content {
-    max-width: 830px;
-}
+.hero-content { max-width: 830px; }
 
 .hero h1 {
     font-size: clamp(38px,5vw,62px);
@@ -115,9 +112,7 @@ nav {
     margin: 0 0 22px;
 }
 
-.hero h1 strong {
-    color: #9bdd49;
-}
+.hero h1 strong { color: #9bdd49; }
 
 .hero p {
     font-size: 20px;
@@ -133,9 +128,7 @@ nav {
 
 /* GENERAL */
 
-section {
-    padding: 70px 0;
-}
+section { padding: 70px 0; }
 
 section h2 {
     color: #0b5797;
@@ -149,15 +142,11 @@ section h2 {
     font-size: 18px;
 }
 
-.light {
-    background: #edf7fc;
-}
+.light { background: #edf7fc; }
 
 /* PRINCIPLES */
 
-.principles {
-    padding: 50px 0;
-}
+.principles { padding: 50px 0; }
 
 .principle-grid {
     display: grid;
@@ -166,9 +155,7 @@ section h2 {
     text-align: center;
 }
 
-.principle {
-    padding: 15px;
-}
+.principle { padding: 15px; }
 
 .icon {
     font-size: 42px;
@@ -239,9 +226,7 @@ section h2 {
     box-shadow: 0 3px 12px rgba(0,0,0,.08);
 }
 
-.ci-card h3 {
-    color: #0b5797;
-}
+.ci-card h3 { color: #0b5797; }
 
 /* BOOKS */
 
@@ -280,13 +265,8 @@ section h2 {
     line-height: 1.25;
 }
 
-.book strong {
-    line-height: 1.35;
-}
-
-.book p {
-    flex-grow: 1;
-}
+.book strong { line-height: 1.35; }
+.book p { flex-grow: 1; }
 
 .amazon-button {
     display: block;
@@ -300,15 +280,11 @@ section h2 {
     margin-top: auto;
 }
 
-.amazon-button:hover {
-    background: #e88b00;
-}
+.amazon-button:hover { background: #e88b00; }
 
 /* ABOUT */
 
-.about {
-    max-width: 850px;
-}
+.about { max-width: 850px; }
 
 blockquote {
     font-size: 25px;
@@ -326,13 +302,8 @@ blockquote {
     text-align: center;
 }
 
-.final h2 {
-    color: white;
-}
-
-.final strong {
-    color: #9bdd49;
-}
+.final h2 { color: white; }
+.final strong { color: #9bdd49; }
 
 /* FOOTER */
 
@@ -347,52 +318,29 @@ footer {
 /* MOBILE */
 
 @media (max-width: 1000px) {
-
-    .method-grid {
-        grid-template-columns: repeat(2,1fr);
-    }
-
-    .principle-grid {
-        grid-template-columns: repeat(2,1fr);
-    }
-
-    .book {
-        flex-basis: calc(50% - 14px);
-    }
-
-    .ci-grid {
-        grid-template-columns: 1fr;
-    }
+    .method-grid { grid-template-columns: repeat(2,1fr); }
+    .principle-grid { grid-template-columns: repeat(2,1fr); }
+    .book { flex-basis: calc(50% - 14px); }
+    .ci-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 650px) {
-
     nav {
         align-items: flex-start;
         flex-direction: column;
         padding: 15px 0;
     }
 
-    .navlinks {
-        gap: 12px;
-    }
+    .navlinks { gap: 12px; }
 
     .principle-grid,
     .method-grid {
         grid-template-columns: 1fr;
     }
 
-    .book {
-        flex-basis: 100%;
-    }
-
-    .hero {
-        padding: 60px 0;
-    }
-
-    .book-cover {
-        height: auto;
-    }
+    .book { flex-basis: 100%; }
+    .hero { padding: 60px 0; }
+    .book-cover { height: auto; }
 }
 
 </style>
@@ -411,7 +359,7 @@ Habit Engineering
 
 <div class="navlinks">
 <a href="#home">Home</a>
-<a href="#habit">Habit Engineering</a>
+<a href="habit-engineering.html">Habit Engineering</a>
 <a href="#method">The Method</a>
 <a href="#books">Books</a>
 <a href="#articles">Articles</a>
@@ -424,13 +372,9 @@ Habit Engineering
 </div>
 </header>
 
-
 <main>
 
-<!-- HERO -->
-
 <section class="hero" id="home">
-
 <div class="container">
 <div class="hero-content">
 
@@ -446,27 +390,15 @@ and reinforcement that make better behaviors the normal way work gets done.
 </p>
 
 <div class="hero-buttons">
-
-<a class="button" href="#habit">
-Explore Habit Engineering
-</a>
-
-<a class="button secondary" href="#books">
-Books by Kevin Kohls
-</a>
-
+<a class="button" href="habit-engineering.html">Explore Habit Engineering</a>
+<a class="button secondary" href="#books">Books by Kevin Kohls</a>
 </div>
 
 </div>
 </div>
-
 </section>
 
-
-<!-- PRINCIPLES -->
-
 <section class="principles">
-
 <div class="container principle-grid">
 
 <div class="principle">
@@ -494,20 +426,14 @@ Books by Kevin Kohls
 </div>
 
 </div>
-
 </section>
 
-
-<!-- HABIT ENGINEERING -->
-
 <section class="light" id="habit">
-
 <div class="container">
 
 <h2>If It's a Behavior Problem, It's a Habit Problem.</h2>
 
 <div class="intro">
-
 <p>
 Training transfers knowledge. Procedures describe what people should do.
 Metrics tell us what happened. Leadership can demand compliance.
@@ -531,16 +457,15 @@ Habit Engineering deliberately designs the conditions that allow better
 behaviors to become easier and more natural to repeat.
 </p>
 
-</div>
+<p>
+<a href="habit-engineering.html"><strong>Learn more about Habit Engineering →</strong></a>
+</p>
 </div>
 
+</div>
 </section>
 
-
-<!-- METHOD -->
-
 <section id="method">
-
 <div class="container">
 
 <h2>The Habit Engineering Method</h2>
@@ -553,47 +478,13 @@ behaviors into habits.
 
 <div class="method-grid">
 
-<div class="step">
-<div class="step-number">1</div>
-<h3>Define the Goal</h3>
-<p>What result are we trying to achieve?</p>
-</div>
-
-<div class="step">
-<div class="step-number">2</div>
-<h3>Find the Constraint</h3>
-<p>What is preventing us from achieving more?</p>
-</div>
-
-<div class="step">
-<div class="step-number">3</div>
-<h3>Identify the Critical Behavior</h3>
-<p>What must people repeatedly do differently?</p>
-</div>
-
-<div class="step">
-<div class="step-number">4</div>
-<h3>Understand the Old Habit</h3>
-<p>What cues and rewards keep the existing behavior alive?</p>
-</div>
-
-<div class="step">
-<div class="step-number">5</div>
-<h3>Engineer the New Habit</h3>
-<p>Create the cue, action and stronger reward.</p>
-</div>
-
-<div class="step">
-<div class="step-number">6</div>
-<h3>Repeat & Reinforce</h3>
-<p>Make the new behavior easier to repeat than the old habit.</p>
-</div>
-
-<div class="step">
-<div class="step-number">7</div>
-<h3>Measure the Result</h3>
-<p>Did the system actually improve?</p>
-</div>
+<div class="step"><div class="step-number">1</div><h3>Define the Goal</h3><p>What result are we trying to achieve?</p></div>
+<div class="step"><div class="step-number">2</div><h3>Find the Constraint</h3><p>What is preventing us from achieving more?</p></div>
+<div class="step"><div class="step-number">3</div><h3>Identify the Critical Behavior</h3><p>What must people repeatedly do differently?</p></div>
+<div class="step"><div class="step-number">4</div><h3>Understand the Old Habit</h3><p>What cues and rewards keep the existing behavior alive?</p></div>
+<div class="step"><div class="step-number">5</div><h3>Engineer the New Habit</h3><p>Create the cue, action and stronger reward.</p></div>
+<div class="step"><div class="step-number">6</div><h3>Repeat & Reinforce</h3><p>Make the new behavior easier to repeat than the old habit.</p></div>
+<div class="step"><div class="step-number">7</div><h3>Measure the Result</h3><p>Did the system actually improve?</p></div>
 
 </div>
 
@@ -602,14 +493,9 @@ When the constraint moves, the focus moves. The habit of improvement remains.
 </div>
 
 </div>
-
 </section>
 
-
-<!-- CONTINUOUS IMPROVEMENT -->
-
 <section class="light">
-
 <div class="container">
 
 <h2>Habit Engineering + Continuous Improvement</h2>
@@ -623,41 +509,24 @@ that sustain them are engineered into habits.
 
 <div class="ci-card">
 <h3>Theory of Constraints</h3>
-<p>
-Find the constraint and focus improvement where it changes system performance.
-Habit Engineering helps make the behaviors required to exploit and elevate
-that constraint repeatable.
-</p>
+<p>Find the constraint and focus improvement where it changes system performance. Habit Engineering helps make the behaviors required to exploit and elevate that constraint repeatable.</p>
 </div>
 
 <div class="ci-card">
 <h3>Lean / TPS</h3>
-<p>
-Standard work, visual management, problem solving and Kaizen become powerful
-when the required behaviors are repeatedly practiced and reinforced.
-</p>
+<p>Standard work, visual management, problem solving and Kaizen become powerful when the required behaviors are repeatedly practiced and reinforced.</p>
 </div>
 
 <div class="ci-card">
 <h3>Continuous Improvement</h3>
-<p>
-The specific improvement process can change. The behavioral challenge remains:
-will people continue using the new process after the initial attention,
-training and enthusiasm disappear?
-</p>
+<p>The specific improvement process can change. The behavioral challenge remains: will people continue using the new process after the initial attention, training and enthusiasm disappear?</p>
 </div>
 
 </div>
-
 </div>
-
 </section>
 
-
-<!-- BOOKS -->
-
 <section id="books">
-
 <div class="container">
 
 <h2>Books by Kevin Kohls</h2>
@@ -669,199 +538,67 @@ improvement produce lasting results.
 
 <div class="book-grid">
 
-
-<!-- HABIT ENGINEERING -->
-
 <div class="book">
-
-<img class="book-cover"
-src="HabitEngineering cover.avif"
-alt="Habit Engineering How to Make Change Stick">
-
+<img class="book-cover" src="HabitEngineering cover.avif" alt="Habit Engineering How to Make Change Stick">
 <h3>Habit Engineering</h3>
 <strong>How to Make Change Stick</strong>
-
-<p>
-Why good improvement ideas disappear—and how cues, actions,
-rewards and reinforcement can make change last.
-</p>
-
-<a class="amazon-button"
-href="https://a.co/d/5AAdeMm"
-target="_blank"
-rel="noopener">
-Buy on Amazon
-</a>
-
+<p>Why good improvement ideas disappear—and how cues, actions, rewards and reinforcement can make change last.</p>
+<a class="amazon-button" href="https://a.co/d/5AAdeMm" target="_blank" rel="noopener">Buy on Amazon</a>
 </div>
 
-
-<!-- TOYOTA WAY -->
-
 <div class="book">
-
-<img class="book-cover"
-src="Habit Engineering Toyota cover.avif"
-alt="Habit Engineering The Habits of the Toyota Way">
-
+<img class="book-cover" src="Habit Engineering Toyota cover.avif" alt="Habit Engineering The Habits of the Toyota Way">
 <h3>Habit Engineering</h3>
 <strong>The Habits of the Toyota Way</strong>
-
-<p>
-Looking beyond Toyota's tools to the organizational habits
-that help make the system work.
-</p>
-
-<a class="amazon-button"
-href="https://a.co/d/0fsGLYoZ"
-target="_blank"
-rel="noopener">
-Buy on Amazon
-</a>
-
+<p>Looking beyond Toyota's tools to the organizational habits that help make the system work.</p>
+<a class="amazon-button" href="https://a.co/d/0fsGLYoZ" target="_blank" rel="noopener">Buy on Amazon</a>
 </div>
 
-
-<!-- WHEN THE NOISE STOPPED -->
-
 <div class="book">
-
-<img class="book-cover"
-src="when the noise stopped cover.avif"
-alt="When The Noise Stopped">
-
+<img class="book-cover" src="when the noise stopped cover.avif" alt="When The Noise Stopped">
 <h3>When The Noise Stopped</h3>
 <strong>Why Improvement Finally Sticks</strong>
-
-<p>
-Why improvement survives when the right behaviors become
-part of the normal way work gets done.
-</p>
-
-<a class="amazon-button"
-href="https://a.co/d/0idUlo2d"
-target="_blank"
-rel="noopener">
-Buy on Amazon
-</a>
-
+<p>Why improvement survives when the right behaviors become part of the normal way work gets done.</p>
+<a class="amazon-button" href="https://a.co/d/0idUlo2d" target="_blank" rel="noopener">Buy on Amazon</a>
 </div>
 
-
-<!-- TIS -->
-
 <div class="book">
-
-<img class="book-cover"
-src="TIS amazon cover.avif"
-alt="The Throughput Improvement System">
-
+<img class="book-cover" src="TIS amazon cover.avif" alt="The Throughput Improvement System">
 <h3>The Throughput Improvement System</h3>
 <strong>A Blueprint for Profitable Manufacturing Systems in the 21st Century</strong>
-
-<p>
-A system-level approach to constraints, throughput and
-profitable manufacturing improvement.
-</p>
-
-<a class="amazon-button"
-href="https://a.co/d/cgSH8YL"
-target="_blank"
-rel="noopener">
-Buy on Amazon
-</a>
-
+<p>A system-level approach to constraints, throughput and profitable manufacturing improvement.</p>
+<a class="amazon-button" href="https://a.co/d/cgSH8YL" target="_blank" rel="noopener">Buy on Amazon</a>
 </div>
 
-
-<!-- FROM HOPIUM TO HABIT -->
-
 <div class="book">
-
-<img class="book-cover"
-src="Hopium to habit cover.avif"
-alt="From Hopium to Habit">
-
+<img class="book-cover" src="Hopium to habit cover.avif" alt="From Hopium to Habit">
 <h3>From Hopium to Habit</h3>
 <strong>Harnessing Habitual Improvement for Operational Success</strong>
-
-<p>
-Moving improvement from hopeful intention to reinforced,
-repeatable organizational behavior.
-</p>
-
-<a class="amazon-button"
-href="https://a.co/d/0f3HHwoV"
-target="_blank"
-rel="noopener">
-Buy on Amazon
-</a>
-
+<p>Moving improvement from hopeful intention to reinforced, repeatable organizational behavior.</p>
+<a class="amazon-button" href="https://a.co/d/0f3HHwoV" target="_blank" rel="noopener">Buy on Amazon</a>
 </div>
 
-
-<!-- ADDICTED TO HOPIUM -->
-
 <div class="book">
-
-<img class="book-cover"
-src="addicted to hopium cover.avif"
-alt="Addicted to Hopium Throughput">
-
+<img class="book-cover" src="addicted to hopium cover.avif" alt="Addicted to Hopium Throughput">
 <h3>Addicted to Hopium – Throughput</h3>
 <strong>Using the DVA Business Process to Break the Guesswork Habit</strong>
-
-<p>
-A throughput-focused approach to replacing guesswork
-with disciplined analysis.
-</p>
-
-<a class="amazon-button"
-href="https://www.amazon.com/dp/1974617041"
-target="_blank"
-rel="noopener">
-Buy on Amazon
-</a>
-
+<p>A throughput-focused approach to replacing guesswork with disciplined analysis.</p>
+<a class="amazon-button" href="https://www.amazon.com/dp/1974617041" target="_blank" rel="noopener">Buy on Amazon</a>
 </div>
-
-
-<!-- COSTCO -->
 
 <div class="book">
-
-<img class="book-cover"
-src="Costco.avif"
-alt="Lessons From a Trip to Costco">
-
+<img class="book-cover" src="Costco.avif" alt="Lessons From a Trip to Costco">
 <h3>Lessons From a Trip to Costco</h3>
 <strong>What a Checkout Line Can Teach Us About Bottlenecks, Habits, and Culture</strong>
-
-<p>
-A checkout line becomes a lesson in constraints, behavior
-and the habits that shape performance.
-</p>
-
-<a class="amazon-button"
-href="https://a.co/d/0h7NuNOH"
-target="_blank"
-rel="noopener">
-Buy on Amazon
-</a>
-
+<p>A checkout line becomes a lesson in constraints, behavior and the habits that shape performance.</p>
+<a class="amazon-button" href="https://a.co/d/0h7NuNOH" target="_blank" rel="noopener">Buy on Amazon</a>
 </div>
-
 
 </div>
 </div>
-
 </section>
 
-
-<!-- ARTICLES -->
-
 <section class="light" id="articles">
-
 <div class="container">
 
 <h2>Latest Thinking</h2>
@@ -875,39 +612,24 @@ throughput and what makes improvement last.
 
 <div class="ci-card">
 <h3>Systems Thinking Needs a Constraint</h3>
-<p>
-Pointing out that local optimization isn't optimal for the system
-is only the beginning. Every system has something limiting its performance.
-</p>
+<p>Pointing out that local optimization isn't optimal for the system is only the beginning. Every system has something limiting its performance.</p>
 </div>
 
 <div class="ci-card">
 <h3>Why 1% Better Every Day Isn't Enough</h3>
-<p>
-Improvement everywhere rarely produces the extraordinary results people
-expect. Focus on the constraint changes the equation.
-</p>
+<p>Improvement everywhere rarely produces the extraordinary results people expect. Focus on the constraint changes the equation.</p>
 </div>
 
 <div class="ci-card">
 <h3>Why Improvement Disappears</h3>
-<p>
-Identifying what to change isn't the same as creating the behaviors
-that make the change survive.
-</p>
+<p>Identifying what to change isn't the same as creating the behaviors that make the change survive.</p>
 </div>
 
 </div>
-
 </div>
-
 </section>
 
-
-<!-- RESEARCH -->
-
 <section id="research">
-
 <div class="container">
 
 <h2>The Research Behind Habit Engineering</h2>
@@ -925,14 +647,9 @@ scientific findings with practical organizational applications.
 </p>
 
 </div>
-
 </section>
 
-
-<!-- ABOUT -->
-
 <section class="light" id="about">
-
 <div class="container about">
 
 <h2>About Kevin Kohls</h2>
@@ -948,29 +665,16 @@ continuous improvement.
 That's why I focus on Habit Engineering.”
 </blockquote>
 
-<p>
-The question eventually became bigger than which improvement tool worked best:
-</p>
+<p>The question eventually became bigger than which improvement tool worked best:</p>
 
-<p>
-<strong>
-What makes people keep improving after the experts leave?
-</strong>
-</p>
+<p><strong>What makes people keep improving after the experts leave?</strong></p>
 
-<p>
-That question became Habit Engineering.
-</p>
+<p>That question became Habit Engineering.</p>
 
 </div>
-
 </section>
 
-
-<!-- FINAL -->
-
 <section class="final" id="contact">
-
 <div class="container">
 
 <h2>Improvement shouldn't disappear when the champion leaves.</h2>
@@ -981,23 +685,17 @@ Improve what matters.<br>
 <strong>Make the improvement a habit.</strong>
 </p>
 
-<a class="button" href="#habit">
-Explore Habit Engineering
-</a>
+<a class="button" href="habit-engineering.html">Explore Habit Engineering</a>
 
 </div>
-
 </section>
 
 </main>
 
-
 <footer>
-
 <div class="container">
 © 2026 Kevin Kohls · Habit Engineering
 </div>
-
 </footer>
 
 </body>
