@@ -1,1 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>What Is Habit Engineering? | Kevin Kohls</title>
+
+<meta name="description" content="Habit Engineering applies the science of habit formation to continuous improvement so better processes become repeatable behaviors that last.">
+
+<style>
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #17324d;
+    line-height: 1.65;
+    background: white;
+}
+
+.container {
+    width: min(1180px, 90%);
+    margin: auto;
+}
+
+/* HEADER */
+
+header {
+    background: white;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    min-height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.brand {
+    font-size: 27px;
+    font-weight: bold;
+    color: #0b5797;
+    line-height: 1.15;
+    text-decoration: none;
+}
+
+.brand span {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 1.2px;
+    color: #666;
+    text-transform: uppercase;
+    margin-top: 4px;
+}
+
+.navlinks {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.navlinks a {
+    text-decoration: none;
+    color: #17324d;
+    font-size: 14px;
+}
+
+.navlinks a:hover { color: #0879cf; }
+
+.contact-button,
+.button {
+    display: inline-block;
+    background: #0879cf;
+    color: white !important;
+    padding: 11px 22px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-button:hover,
+.button:hover {
+    background: #065f9f;
+}
+
+.button.secondary {
+    background: transparent;
+    border: 2px solid white;
+}
+
+/* HERO */
+
+.hero {
+    background: linear-gradient(120deg,#092f53 0%,#0b4e7e 60%,#1479a3 100%);
+    color: white;
+    padding: 85px 0 75px;
+}
+
+.hero-content {
+    max-width: 880px;
+}
+
+.kicker {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #9bdd49;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    font-size: clamp(40px,5vw,62px);
+    line-height: 1.08;
+    margin: 0 0 22px;
+}
+
+.hero h1 strong {
+    color: #9bdd49;
+}
+
+.hero p {
+    font-size: 21px;
+    max-width: 780px;
+}
+
+.hero-buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* GENERAL */
+
+section {
+    padding: 72px 0;
+}
+
+section h2 {
+    color: #0b5797;
+    font-size: 38px;
+    line-height: 1.15;
+    margin-top: 0;
+}
+
+section h3 {
+    color: #0b5797;
+}
+
+.intro {
+    max-width: 880px;
+    font-size: 19px;
+}
+
+.light {
+    background: #edf7fc;
+}
+
+.narrow {
+    max-width: 900px;
+}
+
+/* PROBLEM */
+
+.problem-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 35px;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    padding: 28px;
+    box-shadow: 0 3px 12px rgba(0,0,0,.08);
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.card strong {
+    color: #092f53;
+}
+
+/* LOOP */
+
+.loop {
+    display: grid;
+    grid-template-columns: repeat(7, auto);
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    margin: 42px 0 28px;
+}
+
+.loop-item {
+    width: 145px;
+    height: 145px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 16px;
+    font-weight: bold;
+    color: white;
+    font-size: 18px;
+}
+
+.loop-item.blue {
+    background: #0b5797;
+}
+
+.loop-item.green {
+    background: #4b982d;
+}
+
+.arrow {
+    color: #7c8d9a;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* METHOD */
+
+.method-list {
+    display: grid;
+    gap: 18px;
+    margin-top: 35px;
+}
+
+.method-row {
+    display: grid;
+    grid-template-columns: 58px 1fr;
+    gap: 18px;
+    align-items: start;
+    background: white;
+    border-left: 5px solid #0879cf;
+    padding: 20px 24px;
+    box-shadow: 0 2px 10px rgba(0,0,0,.06);
+}
+
+.number {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #0879cf;
+    color: white;
+    display: grid;
+    place-items: center;
+    font-weight: bold;
+}
+
+.method-row h3 {
+    margin: 0 0 5px;
+}
+
+.method-row p {
+    margin: 0;
+}
+
+/* COMPARISON */
+
+.compare {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    margin-top: 35px;
+}
+
+.compare-box {
+    border-radius: 8px;
+    padding: 30px;
+}
+
+.compare-box.old {
+    background: #f5f7f8;
+    border: 1px solid #d7dde2;
+}
+
+.compare-box.new {
+    background: #edf7fc;
+    border: 1px solid #b7d9eb;
+}
+
+.compare-box h3 {
+    margin-top: 0;
+}
+
+/* FIT */
+
+.fit-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 24px;
+    margin-top: 35px;
+}
+
+.fit-card {
+    background: white;
+    border-top: 5px solid #9bdd49;
+    padding: 28px;
+    box-shadow: 0 3px 12px rgba(0,0,0,.08);
+}
+
+/* QUOTE */
+
+blockquote {
+    font-size: 28px;
+    line-height: 1.45;
+    font-style: italic;
+    border-left: 6px solid #9bdd49;
+    padding-left: 28px;
+    margin: 35px 0;
+    color: #17324d;
+}
+
+/* FINAL */
+
+.final {
+    background: #092f53;
+    color: white;
+    text-align: center;
+}
+
+.final h2 {
+    color: white;
+}
+
+.final strong {
+    color: #9bdd49;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 30px 0;
+    background: #061f36;
+    color: #cbd8e3;
+    text-align: center;
+    font-size: 13px;
+}
+
+/* MOBILE */
+
+@media (max-width: 950px) {
+
+    .problem-grid,
+    .fit-grid,
+    .compare {
+        grid-template-columns: 1fr;
+    }
+
+    .loop {
+        grid-template-columns: 1fr;
+    }
+
+    .arrow {
+        transform: rotate(90deg);
+        text-align: center;
+    }
+}
+
+@media (max-width: 650px) {
+
+    nav {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 15px 0;
+    }
+
+    .navlinks {
+        gap: 12px;
+    }
+
+    .hero {
+        padding: 60px 0;
+    }
+
+    .method-row {
+        grid-template-columns: 1fr;
+    }
+
+    .loop-item {
+        width: 130px;
+        height: 130px;
+        margin: auto;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container">
+<nav>
+
+<a class="brand" href="index.html">
+Habit Engineering
+<span>Find what matters. Make change stick.</span>
+</a>
+
+<div class="navlinks">
+<a href="index.html">Home</a>
+<a href="habit-engineering.html">Habit Engineering</a>
+<a href="index.html#method">The Method</a>
+<a href="index.html#books">Books</a>
+<a href="index.html#articles">Articles</a>
+<a href="index.html#research">Research</a>
+<a href="index.html#about">About</a>
+<a class="contact-button" href="index.html#contact">Contact</a>
+</div>
+
+</nav>
+</div>
+</header>
+
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="container">
+<div class="hero-content">
+
+<div class="kicker">What Is Habit Engineering?</div>
+
+<h1>
+Improvement is not sustained by intention.
+<strong>It is sustained by habit.</strong>
+</h1>
+
+<p>
+Habit Engineering is a practical approach to continuous improvement that
+focuses on the behaviors people must repeat for a better process to survive.
+It combines system focus with deliberate cues, actions, rewards and reinforcement
+so improvement becomes the normal way work gets done.
+</p>
+
+<div class="hero-buttons">
+
+<a class="button" href="#how-it-works">
+See How It Works
+</a>
+
+<a class="button secondary" href="index.html#books">
+Explore the Books
+</a>
+
+</div>
+
+</div>
+</div>
+
+</section>
+
+
+<!-- WHY IMPROVEMENT FADES -->
+
+<section>
+
+<div class="container">
+
+<h2>Why Good Improvements Disappear</h2>
+
+<p class="intro">
+Most organizations already know how to improve a process. The harder problem
+is getting people to keep using the improved process after the launch,
+the workshop, the consultant, or the management attention goes away.
+</p>
+
+<div class="problem-grid">
+
+<div class="card">
+<h3>Training Is Not a Habit</h3>
+<p>
+Training can explain what people should do. It does not guarantee that the
+behavior will be repeated when the environment becomes difficult or distracting.
+</p>
+</div>
+
+<div class="card">
+<h3>Motivation Is Temporary</h3>
+<p>
+People can be highly motivated during a rollout and still return to older
+behaviors later. Motivation helps start change. It does not automatically sustain it.
+</p>
+</div>
+
+<div class="card">
+<h3>Old Behaviors Already Have Rewards</h3>
+<p>
+The existing way of working survived for a reason. It is familiar, practiced,
+and often rewarded by speed, convenience, peer approval, or simply avoiding friction.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CORE IDEA -->
+
+<section class="light" id="how-it-works">
+
+<div class="container narrow">
+
+<h2>If It's a Behavior Problem, It's a Habit Problem.</h2>
+
+<p class="intro">
+A habit is not simply something done often. It is a learned behavioral pattern
+that becomes easier to repeat because the environment provides a cue, a familiar
+action follows, and some form of reward reinforces the behavior.
+</p>
+
+<div class="loop">
+
+<div class="loop-item blue">CUE</div>
+<div class="arrow">→</div>
+
+<div class="loop-item green">ACTION</div>
+<div class="arrow">→</div>
+
+<div class="loop-item blue">REWARD</div>
+<div class="arrow">→</div>
+
+<div class="loop-item green">REPEAT</div>
+
+</div>
+
+<p>
+The question is not merely, <em>"What process should people follow?"</em>
+The more useful question is:
+</p>
+
+<blockquote>
+What will cause people to notice the right moment, take the right action,
+receive a meaningful reward, and want to repeat the behavior tomorrow?
+</blockquote>
+
+<p>
+That is the design problem Habit Engineering is intended to solve.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- WHAT IT CHANGES -->
+
+<section>
+
+<div class="container">
+
+<h2>Habit Engineering Changes the Unit of Improvement</h2>
+
+<div class="compare">
+
+<div class="compare-box old">
+
+<h3>Traditional Improvement Question</h3>
+
+<p>
+<strong>What process should we install?</strong>
+</p>
+
+<p>
+The focus is often on the technical solution: a new standard, metric,
+tool, board, procedure, meeting, layout, or piece of technology.
+</p>
+
+<p>
+Those things may be necessary. But they are not enough if the required
+behavior does not survive.
+</p>
+
+</div>
+
+<div class="compare-box new">
+
+<h3>Habit Engineering Question</h3>
+
+<p>
+<strong>What behavior must become normal for this improvement to last?</strong>
+</p>
+
+<p>
+That shifts attention toward what people actually do, what triggers the behavior,
+what makes the old behavior attractive, and what reward makes the new behavior worth repeating.
+</p>
+
+<p>
+The process and the habit are designed together.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- METHOD -->
+
+<section class="light">
+
+<div class="container">
+
+<h2>The Habit Engineering Method</h2>
+
+<p class="intro">
+Habit Engineering does not begin by trying to improve everything. It begins
+with the goal of the system and the constraint preventing more of that goal.
+Then it works backward to the behavior that matters most.
+</p>
+
+<div class="method-list">
+
+<div class="method-row">
+<div class="number">1</div>
+<div>
+<h3>Define the Goal</h3>
+<p>Be clear about the system result that actually matters.</p>
+</div>
+</div>
+
+<div class="method-row">
+<div class="number">2</div>
+<div>
+<h3>Find the Constraint</h3>
+<p>Identify what is currently limiting the system from achieving more of the goal.</p>
+</div>
+</div>
+
+<div class="method-row">
+<div class="number">3</div>
+<div>
+<h3>Identify the Critical Behavior</h3>
+<p>Determine what people must repeatedly do differently for the constraint to improve.</p>
+</div>
+</div>
+
+<div class="method-row">
+<div class="number">4</div>
+<div>
+<h3>Understand the Old Habit</h3>
+<p>Find the cues, convenience, rewards, social reinforcement, and routines that keep the current behavior alive.</p>
+</div>
+</div>
+
+<div class="method-row">
+<div class="number">5</div>
+<div>
+<h3>Engineer the New Habit</h3>
+<p>Design the cue, action, environment, feedback, and reward that support the desired behavior.</p>
+</div>
+</div>
+
+<div class="method-row">
+<div class="number">6</div>
+<div>
+<h3>Repeat and Reinforce</h3>
+<p>Create enough consistent repetition and reinforcement that the new behavior becomes easier to perform.</p>
+</div>
+</div>
+
+<div class="method-row">
+<div class="number">7</div>
+<div>
+<h3>Measure the System Result</h3>
+<p>Confirm that the changed behavior actually improved the constraint and moved the organization toward its goal.</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- HOW IT FITS -->
+
+<section>
+
+<div class="container">
+
+<h2>Habit Engineering Does Not Replace Your Improvement Method</h2>
+
+<p class="intro">
+It addresses the behavioral layer that every improvement method eventually depends on.
+</p>
+
+<div class="fit-grid">
+
+<div class="fit-card">
+<h3>Theory of Constraints</h3>
+<p>
+TOC provides focus: identify the constraint and improve what limits system performance.
+Habit Engineering helps make the behaviors required to exploit and elevate that constraint repeatable.
+</p>
+</div>
+
+<div class="fit-card">
+<h3>Lean / Toyota Production System</h3>
+<p>
+Standard work, visual management, Kaizen, problem solving and leader routines all depend on repeated behavior.
+Habit Engineering makes that behavioral requirement explicit.
+</p>
+</div>
+
+<div class="fit-card">
+<h3>Any Continuous Improvement Process</h3>
+<p>
+Whether the technical solution comes from engineering, Lean, TOC, automation,
+quality systems, or another method, the same question remains: will people keep doing it?
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- WHY FOCUS MATTERS -->
+
+<section class="light">
+
+<div class="container narrow">
+
+<h2>Why Focus Matters</h2>
+
+<p>
+A common interpretation of continuous improvement is that everyone should
+improve everything a little every day. The problem is that a system does not
+benefit equally from every improvement.
+</p>
+
+<p>
+If one resource, policy, market, or process is limiting the system, improving
+something far away from that constraint may create activity without creating
+meaningful system results.
+</p>
+
+<blockquote>
+Find what matters. Improve what matters. Make the improvement a habit.
+</blockquote>
+
+<p>
+That sequence is important. Habit Engineering is not simply about creating more
+habits. It is about creating the <strong>right habits in the right place</strong>,
+where repeated behavior changes the performance of the system.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- WHAT SUCCESS LOOKS LIKE -->
+
+<section>
+
+<div class="container">
+
+<h2>What Success Looks Like</h2>
+
+<div class="problem-grid">
+
+<div class="card">
+<h3>The Behavior Survives Pressure</h3>
+<p>
+People continue following the improved process when schedules tighten,
+management attention shifts, or the original improvement team is gone.
+</p>
+</div>
+
+<div class="card">
+<h3>The Reward Becomes Visible</h3>
+<p>
+People can see that the new behavior produces a result that matters—to them,
+to their team, or to the organization.
+</p>
+</div>
+
+<div class="card">
+<h3>Improvement Becomes Self-Reinforcing</h3>
+<p>
+The new way of working no longer requires constant reminders. The environment,
+the team, and the results themselves help reinforce it.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FINAL -->
+
+<section class="final">
+
+<div class="container">
+
+<h2>The goal is not to launch another improvement.</h2>
+
+<p style="font-size:24px;">
+The goal is to create a better way of working<br>
+that people continue using after the launch is over.
+</p>
+
+<p style="font-size:28px;">
+<strong>That is Habit Engineering.</strong>
+</p>
+
+<div class="hero-buttons" style="justify-content:center;">
+
+<a class="button" href="index.html#books">
+Explore the Books
+</a>
+
+<a class="button secondary" href="index.html">
+Return to Home
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+<div class="container">
+© 2026 Kevin Kohls · Habit Engineering
+</div>
+
+</footer>
+
+</body>
+</html>
