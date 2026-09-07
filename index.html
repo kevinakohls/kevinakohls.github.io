@@ -161,7 +161,8 @@ section h2 {
 }
 
 /* HABIT */
-.habit-link {
+.habit-link,
+.text-link {
     display: inline-block;
     margin-top: 10px;
     color: #0879cf;
@@ -169,7 +170,8 @@ section h2 {
     text-decoration: none;
 }
 
-.habit-link:hover { text-decoration: underline; }
+.habit-link:hover,
+.text-link:hover { text-decoration: underline; }
 
 .loop {
     display: flex;
@@ -234,6 +236,11 @@ section h2 {
     font-weight: bold;
     font-style: italic;
     font-size: 20px;
+}
+
+.method-button {
+    text-align: center;
+    margin-top: 28px;
 }
 
 /* CARDS */
@@ -329,14 +336,6 @@ section h2 {
     font-size: 17px;
 }
 
-.text-link {
-    color: #0879cf;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.text-link:hover { text-decoration: underline; }
-
 /* FINAL */
 .final {
     background: #092f53;
@@ -415,7 +414,7 @@ Habit Engineering
 <div class="navlinks">
 <a href="#home">Home</a>
 <a href="habit-engineering.html">Habit Engineering</a>
-<a href="#method">The Method</a>
+<a href="method.html">The Method</a>
 <a href="#books">Books</a>
 <a href="#articles">Articles</a>
 <a href="#research">Research</a>
@@ -446,7 +445,7 @@ that make better behaviors the normal way work gets done.
 
 <div class="hero-buttons">
 <a class="button" href="habit-engineering.html">Explore Habit Engineering</a>
-<a class="button secondary" href="#books">Explore the Books</a>
+<a class="button secondary" href="method.html">See the Method</a>
 </div>
 
 </div>
@@ -550,6 +549,10 @@ identify the behaviors necessary to achieve it, and engineer those behaviors int
 
 <div class="method-line">
 When the constraint moves, the focus moves. The habit of improvement remains.
+</div>
+
+<div class="method-button">
+<a class="button" href="method.html">Explore the Full Method</a>
 </div>
 
 </div>
