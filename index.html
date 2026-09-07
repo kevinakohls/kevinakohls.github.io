@@ -5,11 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Habit Engineering | Kevin Kohls</title>
-
-<meta name="description" content="Habit Engineering applies the science of habit formation to continuous improvement. Find what matters. Improve what matters. Make the improvement a habit.">
+<meta name="description" content="Habit Engineering applies what we know about human behavior and habit formation to continuous improvement—so better processes become lasting habits.">
 
 <style>
-
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 
@@ -18,7 +16,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     color: #17324d;
     line-height: 1.6;
-    background: white;
+    background: #fff;
 }
 
 .container {
@@ -27,7 +25,6 @@ body {
 }
 
 /* HEADER */
-
 header {
     background: white;
     border-bottom: 1px solid #ddd;
@@ -45,6 +42,7 @@ nav {
 }
 
 .brand {
+    text-decoration: none;
     font-size: 27px;
     font-weight: bold;
     color: #0b5797;
@@ -87,9 +85,7 @@ nav {
 }
 
 .button:hover,
-.contact-button:hover {
-    background: #065f9f;
-}
+.contact-button:hover { background: #065f9f; }
 
 .button.secondary {
     background: transparent;
@@ -97,14 +93,13 @@ nav {
 }
 
 /* HERO */
-
 .hero {
     background: linear-gradient(120deg,#092f53 0%,#0b4e7e 60%,#1479a3 100%);
     color: white;
     padding: 85px 0;
 }
 
-.hero-content { max-width: 830px; }
+.hero-content { max-width: 850px; }
 
 .hero h1 {
     font-size: clamp(38px,5vw,62px);
@@ -116,7 +111,7 @@ nav {
 
 .hero p {
     font-size: 20px;
-    max-width: 740px;
+    max-width: 760px;
 }
 
 .hero-buttons {
@@ -127,7 +122,6 @@ nav {
 }
 
 /* GENERAL */
-
 section { padding: 70px 0; }
 
 section h2 {
@@ -138,14 +132,13 @@ section h2 {
 }
 
 .intro {
-    max-width: 850px;
+    max-width: 860px;
     font-size: 18px;
 }
 
 .light { background: #edf7fc; }
 
 /* PRINCIPLES */
-
 .principles { padding: 50px 0; }
 
 .principle-grid {
@@ -167,8 +160,41 @@ section h2 {
     margin: 5px 0;
 }
 
-/* METHOD */
+/* HABIT */
+.habit-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #0879cf;
+    font-weight: bold;
+    text-decoration: none;
+}
 
+.habit-link:hover { text-decoration: underline; }
+
+.loop {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 30px 0 20px;
+}
+
+.loop-box {
+    background: #0b5797;
+    color: white;
+    padding: 13px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: .5px;
+}
+
+.loop-arrow {
+    color: #0879cf;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/* METHOD */
 .method-grid {
     display: grid;
     grid-template-columns: repeat(7,1fr);
@@ -211,7 +237,6 @@ section h2 {
 }
 
 /* CARDS */
-
 .ci-grid {
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -229,7 +254,6 @@ section h2 {
 .ci-card h3 { color: #0b5797; }
 
 /* BOOKS */
-
 .book-grid {
     display: flex;
     flex-wrap: wrap;
@@ -282,20 +306,38 @@ section h2 {
 
 .amazon-button:hover { background: #e88b00; }
 
-/* ABOUT */
-
-.about { max-width: 850px; }
-
-blockquote {
-    font-size: 25px;
-    font-style: italic;
-    border-left: 5px solid #9bdd49;
-    padding-left: 25px;
-    margin: 35px 0;
+/* ABOUT PREVIEW */
+.about-preview {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 40px;
+    align-items: center;
 }
 
-/* FINAL */
+.about-photo {
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 5px 18px rgba(0,0,0,.13);
+}
 
+.about-preview h2 { margin-bottom: 14px; }
+
+.about-preview p {
+    max-width: 780px;
+    font-size: 17px;
+}
+
+.text-link {
+    color: #0879cf;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.text-link:hover { text-decoration: underline; }
+
+/* FINAL */
 .final {
     background: #092f53;
     color: white;
@@ -305,8 +347,11 @@ blockquote {
 .final h2 { color: white; }
 .final strong { color: #9bdd49; }
 
-/* FOOTER */
+.final .email {
+    margin-top: 22px;
+}
 
+/* FOOTER */
 footer {
     padding: 30px 0;
     background: #061f36;
@@ -315,8 +360,9 @@ footer {
     font-size: 13px;
 }
 
-/* MOBILE */
+footer a { color: #cbd8e3; }
 
+/* MOBILE */
 @media (max-width: 1000px) {
     .method-grid { grid-template-columns: repeat(2,1fr); }
     .principle-grid { grid-template-columns: repeat(2,1fr); }
@@ -324,7 +370,7 @@ footer {
     .ci-grid { grid-template-columns: 1fr; }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 700px) {
     nav {
         align-items: flex-start;
         flex-direction: column;
@@ -341,8 +387,17 @@ footer {
     .book { flex-basis: 100%; }
     .hero { padding: 60px 0; }
     .book-cover { height: auto; }
-}
 
+    .about-preview {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .about-photo {
+        width: 180px;
+        height: 180px;
+    }
+}
 </style>
 </head>
 
@@ -352,10 +407,10 @@ footer {
 <div class="container">
 <nav>
 
-<div class="brand">
+<a class="brand" href="index.html">
 Habit Engineering
 <span>Find what matters. Make change stick.</span>
-</div>
+</a>
 
 <div class="navlinks">
 <a href="#home">Home</a>
@@ -364,8 +419,8 @@ Habit Engineering
 <a href="#books">Books</a>
 <a href="#articles">Articles</a>
 <a href="#research">Research</a>
-<a href="#about">About</a>
-<a class="contact-button" href="#contact">Contact</a>
+<a href="about.html">About Kevin</a>
+<a class="contact-button" href="mailto:kevin.kohls@yahoo.com">Contact</a>
 </div>
 
 </nav>
@@ -384,14 +439,14 @@ Improvement doesn't fail because people don't know what to do.
 </h1>
 
 <p>
-Habit Engineering applies what we know about human behavior and habit
-formation to continuous improvement—creating the cues, actions, rewards
-and reinforcement that make better behaviors the normal way work gets done.
+Habit Engineering applies what we know about human behavior and habit formation
+to continuous improvement—creating the cues, actions, rewards and reinforcement
+that make better behaviors the normal way work gets done.
 </p>
 
 <div class="hero-buttons">
 <a class="button" href="habit-engineering.html">Explore Habit Engineering</a>
-<a class="button secondary" href="#books">Books by Kevin Kohls</a>
+<a class="button secondary" href="#books">Explore the Books</a>
 </div>
 
 </div>
@@ -421,8 +476,8 @@ and reinforcement that make better behaviors the normal way work gets done.
 
 <div class="principle">
 <div class="icon">🏭</div>
-<h3>Real-World Experience</h3>
-<p>Ideas developed through decades of manufacturing and continuous improvement.</p>
+<h3>Built From Experience</h3>
+<p>Ideas shaped by decades of manufacturing, throughput and continuous improvement.</p>
 </div>
 
 </div>
@@ -440,26 +495,32 @@ Metrics tell us what happened. Leadership can demand compliance.
 </p>
 
 <p>
-But none of those things guarantees that tomorrow—when production falls
-behind, the supervisor changes, or the improvement champion leaves—people
-will continue doing what they were taught.
+But none of those guarantees that tomorrow—when production falls behind,
+the supervisor changes, or the improvement champion leaves—people will
+continue doing what they were taught.
 </p>
 
 <p>
-Under pressure, old habits compete with the new process. And old habits
-have an enormous advantage: they have already been practiced and rewarded.
+Under pressure, old habits compete with the new process. Old habits have an
+enormous advantage: they have already been practiced and rewarded.
 </p>
 
-<h3>CUE → ACTION → REWARD → REPEAT</h3>
+<div class="loop">
+<span class="loop-box">CUE</span>
+<span class="loop-arrow">→</span>
+<span class="loop-box">ACTION</span>
+<span class="loop-arrow">→</span>
+<span class="loop-box">REWARD</span>
+<span class="loop-arrow">→</span>
+<span class="loop-box">REPEAT</span>
+</div>
 
 <p>
 Habit Engineering deliberately designs the conditions that allow better
 behaviors to become easier and more natural to repeat.
 </p>
 
-<p>
-<a href="habit-engineering.html"><strong>Learn more about Habit Engineering →</strong></a>
-</p>
+<a class="habit-link" href="habit-engineering.html">Learn more about Habit Engineering →</a>
 </div>
 
 </div>
@@ -472,8 +533,7 @@ behaviors to become easier and more natural to repeat.
 
 <p class="intro">
 Don't try to change everything. Focus improvement where it matters,
-identify the behaviors necessary to achieve it, and engineer those
-behaviors into habits.
+identify the behaviors necessary to achieve it, and engineer those behaviors into habits.
 </p>
 
 <div class="method-grid">
@@ -483,7 +543,7 @@ behaviors into habits.
 <div class="step"><div class="step-number">3</div><h3>Identify the Critical Behavior</h3><p>What must people repeatedly do differently?</p></div>
 <div class="step"><div class="step-number">4</div><h3>Understand the Old Habit</h3><p>What cues and rewards keep the existing behavior alive?</p></div>
 <div class="step"><div class="step-number">5</div><h3>Engineer the New Habit</h3><p>Create the cue, action and stronger reward.</p></div>
-<div class="step"><div class="step-number">6</div><h3>Repeat & Reinforce</h3><p>Make the new behavior easier to repeat than the old habit.</p></div>
+<div class="step"><div class="step-number">6</div><h3>Repeat &amp; Reinforce</h3><p>Make the new behavior easier to repeat than the old habit.</p></div>
 <div class="step"><div class="step-number">7</div><h3>Measure the Result</h3><p>Did the system actually improve?</p></div>
 
 </div>
@@ -501,25 +561,36 @@ When the constraint moves, the focus moves. The habit of improvement remains.
 <h2>Habit Engineering + Continuous Improvement</h2>
 
 <p class="intro">
-The tools aren't the enemy. They're more powerful when the behaviors
-that sustain them are engineered into habits.
+Habit Engineering doesn't replace your improvement method. It addresses the
+behavioral problem that determines whether the method continues working after
+the installation, event or initial enthusiasm is over.
 </p>
 
 <div class="ci-grid">
 
 <div class="ci-card">
 <h3>Theory of Constraints</h3>
-<p>Find the constraint and focus improvement where it changes system performance. Habit Engineering helps make the behaviors required to exploit and elevate that constraint repeatable.</p>
+<p>
+Find the constraint and focus improvement where it changes system performance.
+Habit Engineering helps make the behaviors required to exploit and elevate that
+constraint repeatable.
+</p>
 </div>
 
 <div class="ci-card">
 <h3>Lean / TPS</h3>
-<p>Standard work, visual management, problem solving and Kaizen become powerful when the required behaviors are repeatedly practiced and reinforced.</p>
+<p>
+Standard work, visual management, problem solving and Kaizen become powerful
+when the required behaviors are repeatedly practiced and reinforced.
+</p>
 </div>
 
 <div class="ci-card">
 <h3>Continuous Improvement</h3>
-<p>The specific improvement process can change. The behavioral challenge remains: will people continue using the new process after the initial attention, training and enthusiasm disappear?</p>
+<p>
+The specific method can change. The behavioral challenge remains: will people
+continue using and improving the process after the experts leave?
+</p>
 </div>
 
 </div>
@@ -532,8 +603,8 @@ that sustain them are engineered into habits.
 <h2>Books by Kevin Kohls</h2>
 
 <p class="intro">
-Ideas about habits, constraints, throughput and making continuous
-improvement produce lasting results.
+Ideas about habits, constraints, throughput and making continuous improvement
+produce lasting results.
 </p>
 
 <div class="book-grid">
@@ -604,25 +675,34 @@ improvement produce lasting results.
 <h2>Latest Thinking</h2>
 
 <p class="intro">
-Articles about Habit Engineering, constraints, systems thinking,
-throughput and what makes improvement last.
+Articles about Habit Engineering, constraints, systems thinking, throughput
+and what makes improvement last.
 </p>
 
 <div class="ci-grid">
 
 <div class="ci-card">
 <h3>Systems Thinking Needs a Constraint</h3>
-<p>Pointing out that local optimization isn't optimal for the system is only the beginning. Every system has something limiting its performance.</p>
+<p>
+Pointing out that local optimization isn't optimal for the system is only the
+beginning. Every system has something limiting its performance.
+</p>
 </div>
 
 <div class="ci-card">
 <h3>Why 1% Better Every Day Isn't Enough</h3>
-<p>Improvement everywhere rarely produces the extraordinary results people expect. Focus on the constraint changes the equation.</p>
+<p>
+Improvement everywhere rarely produces the extraordinary results people expect.
+Focus on the constraint changes the equation.
+</p>
 </div>
 
 <div class="ci-card">
 <h3>Why Improvement Disappears</h3>
-<p>Identifying what to change isn't the same as creating the behaviors that make the change survive.</p>
+<p>
+Identifying what to change isn't the same as creating the behaviors that make
+the change survive.
+</p>
 </div>
 
 </div>
@@ -635,42 +715,44 @@ throughput and what makes improvement last.
 <h2>The Research Behind Habit Engineering</h2>
 
 <p class="intro">
-Habit Engineering draws from research into habit formation,
-reinforcement, learning, behavioral science and organizational behavior—and
-asks how those findings can be applied to continuous improvement in
-real organizations.
+Habit Engineering draws from research into habit formation, reinforcement,
+learning, behavioral science and organizational behavior—and asks how those
+findings can be applied to continuous improvement in real organizations.
 </p>
 
 <p>
-This section will grow into a curated research library connecting
-scientific findings with practical organizational applications.
+This section will grow into a curated research library connecting scientific
+findings with practical organizational applications.
 </p>
 
 </div>
 </section>
 
-<section class="light" id="about">
-<div class="container about">
+<section class="light">
+<div class="container">
+<div class="about-preview">
 
+<img class="about-photo" src="kevin-kohls-headshot.png" alt="Kevin Kohls">
+
+<div>
 <h2>About Kevin Kohls</h2>
 
 <p>
-Habit Engineering grew from decades of experience with engineering,
-manufacturing systems, constraints, throughput, Lean/TPS and
-continuous improvement.
+Kevin Kohls is an engineer, manufacturing leader and author whose work has
+centered on a deceptively difficult question: why do some improvements become
+the normal way of working while others disappear after the initial push?
 </p>
 
-<blockquote>
-“Creating an improvement is easier than sustaining one.
-That's why I focus on Habit Engineering.”
-</blockquote>
+<p>
+His experience with throughput improvement at General Motors—and later with
+Lean/TPS, the Theory of Constraints and other improvement approaches—eventually
+led to Habit Engineering.
+</p>
 
-<p>The question eventually became bigger than which improvement tool worked best:</p>
+<a class="text-link" href="about.html">Read Kevin's story →</a>
+</div>
 
-<p><strong>What makes people keep improving after the experts leave?</strong></p>
-
-<p>That question became Habit Engineering.</p>
-
+</div>
 </div>
 </section>
 
@@ -687,6 +769,11 @@ Improve what matters.<br>
 
 <a class="button" href="habit-engineering.html">Explore Habit Engineering</a>
 
+<div class="email">
+<p>Questions about the books, Habit Engineering or future classes?</p>
+<a class="button" href="mailto:kevin.kohls@yahoo.com">Email Kevin</a>
+</div>
+
 </div>
 </section>
 
@@ -694,7 +781,8 @@ Improve what matters.<br>
 
 <footer>
 <div class="container">
-© 2026 Kevin Kohls · Habit Engineering
+© 2026 Kevin Kohls · Habit Engineering ·
+<a href="mailto:kevin.kohls@yahoo.com">kevin.kohls@yahoo.com</a>
 </div>
 </footer>
 
